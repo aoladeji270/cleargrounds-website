@@ -43,6 +43,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   overflow-x: hidden;
+  background-color: #1B4332;
 }
 
 body {
@@ -187,7 +188,7 @@ p:last-child { margin-bottom: 0; }
   right: 0;
   z-index: 900;
   height: var(--nav-height);
-  background: rgba(13, 31, 23, 0.45);
+  background: transparent;
   transition: background var(--transition), box-shadow var(--transition);
 }
 #navbar.scrolled {
@@ -842,7 +843,12 @@ footer {
     --nav-height: 64px;
   }
 
-  /* Nav */
+  /* Nav — always solid on mobile so logo + hamburger are always visible */
+  #navbar {
+    background: var(--color-primary);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  }
+
   .hamburger { display: flex; }
 
   .nav-links {
