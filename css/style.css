@@ -42,6 +42,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -50,6 +51,7 @@ body {
   background: var(--color-white);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  width: 100%;
 }
 
 img, video { max-width: 100%; display: block; }
@@ -281,10 +283,12 @@ p:last-child { margin-bottom: 0; }
 #hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  width: 100%;
   /* Animated gradient — shows as fallback if video fails, or base layer */
   background: linear-gradient(135deg, #060F09 0%, #1B4332 40%, #2D6A4F 70%, #0D2B1E 100%);
   background-size: 350% 350%;
@@ -408,6 +412,7 @@ p:last-child { margin-bottom: 0; }
   transition: transform var(--transition), box-shadow var(--transition);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .service-card:hover {
   transform: translateY(-7px);
@@ -814,10 +819,12 @@ footer {
 
 
 /* ============================================================
-   RESPONSIVE — 1024px
+   RESPONSIVE — 1024px (tablets landscape)
 ============================================================ */
 @media (max-width: 1024px) {
   :root { --section-pad: 80px; }
+
+  .services-grid { gap: 1.5rem; }
 
   .footer-container {
     grid-template-columns: 1fr 1fr;
@@ -827,10 +834,13 @@ footer {
 }
 
 /* ============================================================
-   RESPONSIVE — 768px
+   RESPONSIVE — 768px (tablets portrait + large phones)
 ============================================================ */
 @media (max-width: 768px) {
-  :root { --section-pad: 64px; }
+  :root {
+    --section-pad: 60px;
+    --nav-height: 64px;
+  }
 
   /* Nav */
   .hamburger { display: flex; }
@@ -843,63 +853,124 @@ footer {
     background: var(--color-primary);
     flex-direction: column;
     align-items: stretch;
-    padding: 1.5rem 1.5rem 2rem;
-    gap: 0.4rem;
+    padding: 1.2rem 1.5rem 2rem;
+    gap: 0.3rem;
     transform: translateY(-110%);
     transition: transform var(--transition);
     box-shadow: var(--shadow-lg);
+    z-index: 899;
   }
   .nav-links.open { transform: translateY(0); }
 
   .nav-links li { width: 100%; }
-  .nav-link { display: block; padding: 0.75rem 1rem; font-size: 1rem; }
-  .btn-nav-cta { display: block; text-align: center; margin: 0.5rem 0 0; padding: 0.85rem; font-size: 1rem; }
+  .nav-link {
+    display: block;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    border-radius: var(--radius);
+  }
+  .btn-nav-cta {
+    display: block;
+    text-align: center;
+    margin: 0.5rem 0 0;
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
 
   /* Hero */
-  .hero-content { padding-bottom: 6rem; }
+  .hero-content {
+    padding-top: calc(var(--nav-height) + 1.5rem);
+    padding-bottom: 5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.15em; }
+  .hero-subtitle { font-size: 1rem; }
+  .hero-actions { gap: 0.75rem; }
+
+  /* Section containers */
+  .section-container { padding-left: 1.25rem; padding-right: 1.25rem; }
 
   /* Services */
-  .services-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .services-grid { grid-template-columns: 1fr; gap: 1.25rem; }
 
   /* Why Us */
   .why-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-    max-width: 440px;
+    gap: 2rem;
+    max-width: 420px;
     margin: 0 auto;
   }
+  #why-us .section-container { padding-top: 60px; padding-bottom: 60px; }
 
   /* About */
-  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-left { order: 2; }
+  .about-right { order: 1; }
+
+  /* CTA band */
+  #cta-band .section-container { padding-top: 60px; padding-bottom: 60px; }
 
   /* Footer */
   .footer-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    padding-bottom: 2rem;
+    padding: 3rem 1.25rem 2rem;
   }
-  .footer-brand { grid-column: unset; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-tagline { max-width: 100%; }
 
   /* Modal */
   .modal-box { padding: 2.5rem 1.8rem 2rem; }
 }
 
 /* ============================================================
-   RESPONSIVE — 480px
+   RESPONSIVE — 480px (phones)
 ============================================================ */
 @media (max-width: 480px) {
-  h1 { font-size: 2.1rem; }
-  h2 { font-size: 1.75rem; }
+  :root { --section-pad: 52px; }
 
+  h1 { font-size: 2rem; line-height: 1.2; }
+  h2 { font-size: 1.65rem; }
+
+  /* Hero */
+  .hero-content { padding-left: 1rem; padding-right: 1rem; }
   .hero-actions { flex-direction: column; align-items: stretch; }
-  .hero-actions .btn { text-align: center; }
+  .hero-actions .btn { text-align: center; width: 100%; }
 
-  .service-card { padding: 2rem 1.6rem; }
-  .card-img-wrap { margin: -2rem -1.6rem 1.8rem; }
+  /* Services */
+  .service-card { padding: 2rem 1.5rem; }
+  .card-img-wrap { margin: -2rem -1.5rem 1.6rem; }
+  .card-img-wrap { height: 190px; }
 
-  .about-accent-block { padding: 2.4rem 2rem; }
-  .about-quote { font-size: 1.3rem; }
+  /* Why Us */
+  .why-icon { width: 60px; height: 60px; }
 
-  .modal-box { padding: 2rem 1.4rem; }
+  /* About */
+  .about-accent-block { padding: 2rem 1.6rem; }
+  .about-quote { font-size: 1.25rem; }
+
+  /* Footer */
+  .footer-container { grid-template-columns: 1fr; }
+  .footer-brand { grid-column: unset; }
+
+  /* Modal */
+  .modal-box { padding: 2rem 1.25rem 1.75rem; }
   .modal-box h2 { font-size: 1.5rem; }
+  .modal-btn { padding: 0.9rem 1.1rem; }
+}
+
+/* ============================================================
+   RESPONSIVE — 360px (very small phones)
+============================================================ */
+@media (max-width: 360px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+
+  .nav-container { padding: 0 1rem; }
+  .section-container { padding-left: 1rem; padding-right: 1rem; }
+
+  .hero-title br { display: none; }
+  .service-card { padding: 1.75rem 1.25rem; }
+  .card-img-wrap { margin: -1.75rem -1.25rem 1.5rem; }
 }
