@@ -114,11 +114,18 @@
       observer.observe(el);
     });
   } else {
-    // Fallback for browsers without IntersectionObserver
     animElements.forEach(function (el) {
       el.classList.add('visible');
     });
   }
+
+  // Safety net — force all animated elements visible after 1 second
+  // in case the observer misses any
+  setTimeout(function () {
+    animElements.forEach(function (el) {
+      el.classList.add('visible');
+    });
+  }, 1000);
 
 
   /* ── Read More / Read Less toggle ───────────────────────── */
