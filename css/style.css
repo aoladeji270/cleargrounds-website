@@ -515,6 +515,11 @@ p:last-child { margin-bottom: 0; }
   padding-bottom: 80px;
 }
 
+.why-header { margin-bottom: 3.5rem; }
+.why-label  { color: var(--color-accent); }
+.why-title  { color: var(--color-white); }
+.why-header .header-rule { margin: 1.3rem auto 0; }
+
 .why-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
