@@ -128,29 +128,33 @@
   }, 1000);
 
 
-  /* ── Landscaping image slider ───────────────────────────── */
-  var slider = document.getElementById('landscaping-slider');
-  if (slider) {
-    var slides = slider.querySelectorAll('.slide');
-    var dots   = slider.querySelectorAll('.slider-dot');
-    var current = 0;
+  /* ── Generic service card slider factory ────────────────── */
+  function initCardSlider(id, interval) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var slides = el.querySelectorAll('.slide');
+    var dots   = el.querySelectorAll('.slider-dot');
+    var cur    = 0;
 
-    function goToSlide(index) {
-      slides[current].classList.remove('active');
-      dots[current].classList.remove('active');
-      current = index;
-      slides[current].classList.add('active');
-      dots[current].classList.add('active');
+    function go(index) {
+      slides[cur].classList.remove('active');
+      dots[cur].classList.remove('active');
+      cur = (index + slides.length) % slides.length;
+      slides[cur].classList.add('active');
+      dots[cur].classList.add('active');
     }
 
     dots.forEach(function (dot, i) {
-      dot.addEventListener('click', function () { goToSlide(i); });
+      dot.addEventListener('click', function () { go(i); });
     });
 
-    setInterval(function () {
-      goToSlide((current + 1) % slides.length);
-    }, 3500);
+    setInterval(function () { go(cur + 1); }, interval || 3500);
   }
+
+  initCardSlider('landscaping-slider', 3500);
+  initCardSlider('fencing-card-slider', 4000);
+  initCardSlider('loft-card-slider',    4500);
+
 
   /* ── Read More / Read Less toggle ───────────────────────── */
   document.querySelectorAll('.read-more-btn').forEach(function (btn) {
