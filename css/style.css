@@ -655,7 +655,6 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* Before/After badge inside slide */
-.gallery-slide { position: relative; }
 .slide-badge {
   position: absolute;
   top: 1rem;
