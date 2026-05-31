@@ -288,6 +288,64 @@
     }, { passive: true });
   }
 
+  /* ── Video slider (projects page) ──────────────────────── */
+  var videoSlider = document.getElementById('video-slider');
+  if (videoSlider) {
+    var vSlides  = videoSlider.querySelectorAll('.video-slide');
+    var vDots    = videoSlider.querySelectorAll('.gallery-dot');
+    var vCounter = document.getElementById('video-counter');
+    var vCurrent = 0;
+    var vTotal   = vSlides.length;
+
+    function goToVideo(index) {
+      var leaving = vSlides[vCurrent].querySelector('video');
+      if (leaving) leaving.pause();
+
+      vSlides[vCurrent].classList.remove('active');
+      vDots[vCurrent].classList.remove('active');
+      vCurrent = (index + vTotal) % vTotal;
+      vSlides[vCurrent].classList.add('active');
+      vDots[vCurrent].classList.add('active');
+      if (vCounter) vCounter.textContent = (vCurrent + 1) + ' / ' + vTotal;
+
+      var arriving = vSlides[vCurrent].querySelector('video');
+      if (arriving) {
+        arriving.currentTime = 0;
+        arriving.play().catch(function () {});
+      }
+    }
+
+    videoSlider.querySelector('.gallery-prev').addEventListener('click', function () {
+      goToVideo(vCurrent - 1);
+    });
+    videoSlider.querySelector('.gallery-next').addEventListener('click', function () {
+      goToVideo(vCurrent + 1);
+    });
+
+    vDots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { goToVideo(i); });
+    });
+
+    // Auto-advance to next slide when a non-looping video ends
+    vSlides.forEach(function (slide) {
+      var vid = slide.querySelector('video');
+      if (vid && !vid.loop) {
+        vid.addEventListener('ended', function () { goToVideo(vCurrent + 1); });
+      }
+    });
+
+    // Swipe support
+    var vTouchStartX = 0;
+    videoSlider.addEventListener('touchstart', function (e) {
+      vTouchStartX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    videoSlider.addEventListener('touchend', function (e) {
+      var diff = vTouchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) goToVideo(diff > 0 ? vCurrent + 1 : vCurrent - 1);
+    }, { passive: true });
+  }
+
+
   /* ── Hero video fallback ─────────────────────────────────── */
   var heroVideo = document.querySelector('.hero-video');
 

@@ -54,16 +54,47 @@
   <section id="projects">
     <div class="section-container">
 
-      <!-- Featured Video -->
-      <div class="project-video-wrap animate-on-scroll">
-        <video autoplay muted loop playsinline aria-hidden="true">
-          <source src="Pictures/landscaping.mp4" type="video/mp4">
-        </video>
-        <div class="project-video-overlay"></div>
-        <div class="project-video-label">
-          <span class="pv-tag">Landscaping</span>
-          Garden Transformation &mdash; Essex
+      <!-- Featured Video Slider -->
+      <div class="video-slider animate-on-scroll" id="video-slider">
+        <div class="video-slides-wrap">
+
+          <div class="video-slide active">
+            <video autoplay muted loop playsinline>
+              <source src="Pictures/landscaping.mp4" type="video/mp4">
+            </video>
+            <div class="project-video-overlay"></div>
+            <div class="project-video-label">
+              <span class="pv-tag">Landscaping</span>
+              Garden Transformation &mdash; Essex
+            </div>
+          </div>
+
+          <div class="video-slide">
+            <video playsinline preload="metadata">
+              <source src="Pictures/end.mp4" type="video/mp4">
+            </video>
+            <div class="project-video-overlay"></div>
+            <div class="project-video-label">
+              <span class="pv-tag">Cleaning</span>
+              End of Tenancy Clean &mdash; Essex
+            </div>
+          </div>
+
         </div>
+
+        <button class="gallery-arrow gallery-prev" aria-label="Previous video">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="gallery-arrow gallery-next" aria-label="Next video">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="gallery-dots">
+          <span class="gallery-dot active"></span>
+          <span class="gallery-dot"></span>
+        </div>
+
+        <div class="gallery-counter" id="video-counter">1 / 2</div>
       </div>
 
       <!-- Garden Photo Slider -->
