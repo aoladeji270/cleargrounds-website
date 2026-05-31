@@ -72,19 +72,38 @@
         <a href="#" class="btn btn-primary btn-quote">Get a Free Quote</a>
       </div>
 
-      <!-- Garden Photo Gallery -->
+      <!-- Garden Photo Slider -->
       <div class="gallery-header animate-on-scroll">
         <p class="section-label">Our Portfolio</p>
         <h2>Garden Transformations</h2>
         <div class="header-rule"></div>
       </div>
 
-      <div class="photo-gallery animate-on-scroll">
-        <div class="gallery-item"><img src="Pictures/garden 1.jpeg" alt="Garden project 1" loading="lazy"></div>
-        <div class="gallery-item"><img src="Pictures/garden 2.jpeg" alt="Garden project 2" loading="lazy"></div>
-        <div class="gallery-item"><img src="Pictures/garden 3.jpeg" alt="Garden project 3" loading="lazy"></div>
-        <div class="gallery-item"><img src="Pictures/garden 4.jpeg" alt="Garden project 4" loading="lazy"></div>
-        <div class="gallery-item"><img src="Pictures/garden 5.jpeg" alt="Garden project 5" loading="lazy"></div>
+      <div class="gallery-slider animate-on-scroll" id="gallery-slider">
+        <div class="gallery-slides">
+          <div class="gallery-slide active"><img src="Pictures/garden 1.jpeg" alt="Garden project 1"></div>
+          <div class="gallery-slide"><img src="Pictures/garden 2.jpeg" alt="Garden project 2"></div>
+          <div class="gallery-slide"><img src="Pictures/garden 3.jpeg" alt="Garden project 3"></div>
+          <div class="gallery-slide"><img src="Pictures/garden 4.jpeg" alt="Garden project 4"></div>
+          <div class="gallery-slide"><img src="Pictures/garden 5.jpeg" alt="Garden project 5"></div>
+        </div>
+
+        <button class="gallery-arrow gallery-prev" aria-label="Previous image">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="gallery-arrow gallery-next" aria-label="Next image">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="gallery-dots" id="gallery-dots">
+          <span class="gallery-dot active"></span>
+          <span class="gallery-dot"></span>
+          <span class="gallery-dot"></span>
+          <span class="gallery-dot"></span>
+          <span class="gallery-dot"></span>
+        </div>
+
+        <div class="gallery-counter" id="gallery-counter">1 / 5</div>
       </div>
 
     </div>
