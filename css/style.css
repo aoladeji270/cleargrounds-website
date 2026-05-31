@@ -568,6 +568,12 @@ p:last-child { margin-bottom: 0; }
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
 }
+.project-card-full {
+  grid-column: 1 / -1;
+}
+.project-card-full .before-after {
+  height: 280px;
+}
 
 .project-service-tag {
   padding: 0.85rem 1.25rem;
