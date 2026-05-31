@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1B4332">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="ClearGrounds Recent Projects: See our latest end of tenancy cleaning, fencing, landscaping and loft clearing work across Essex.">
+  <title>Recent Projects | ClearGrounds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 21V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M12 13C12 13 6 10 6 5C6 5 10 5 12 9C14 5 18 5 18 5C18 10 12 13 12 13Z" fill="currentColor"/>
+          <path d="M12 17C12 17 8.5 15 7 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M12 17C12 17 15.5 15 17 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text"><span class="logo-clear">Clear</span><span class="logo-grounds">Grounds</span></span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="projects.html" class="nav-link nav-link-active">Recent Projects</a></li>
+        <li><a href="index.html#cta-band" class="nav-link">Contact</a></li>
+        <li><a href="#" class="btn btn-primary btn-quote btn-nav-cta">Get a Quote</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ==================== PAGE HERO ==================== -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <p class="hero-eyebrow">ClearGrounds Portfolio</p>
+      <h1>Recent Projects</h1>
+      <p class="page-hero-sub">A look at some of our latest work across Essex — from full garden transformations to end of tenancy cleans and new fencing installations.</p>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS CONTENT ==================== -->
+  <section id="projects">
+    <div class="section-container">
+
+      <!-- Featured Video -->
+      <div class="project-video-wrap animate-on-scroll">
+        <video autoplay muted loop playsinline aria-hidden="true">
+          <source src="Pictures/landscaping.mp4" type="video/mp4">
+        </video>
+        <div class="project-video-overlay"></div>
+        <div class="project-video-label">
+          <span class="pv-tag">Landscaping</span>
+          Garden Transformation &mdash; Essex
+        </div>
+      </div>
+
+      <!-- Before / After Grid -->
+      <div class="projects-grid">
+
+        <!-- Cleaning - Full Room -->
+        <div class="project-card animate-on-scroll">
+          <div class="project-service-tag">End of Tenancy Cleaning &mdash; Full Room</div>
+          <div class="before-after">
+            <div class="ba-half">
+              <img src="https://images.pexels.com/photos/8859700/pexels-photo-8859700.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Messy room before end of tenancy clean" loading="lazy">
+              <span class="ba-badge ba-before">Before</span>
+            </div>
+            <div class="ba-half">
+              <img src="https://images.pexels.com/photos/3965509/pexels-photo-3965509.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Clean bright living room after professional clean" loading="lazy">
+              <span class="ba-badge ba-after">After</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cleaning - Kitchen -->
+        <div class="project-card animate-on-scroll">
+          <div class="project-service-tag">End of Tenancy Cleaning &mdash; Kitchen</div>
+          <div class="before-after">
+            <div class="ba-half">
+              <img src="https://images.pexels.com/photos/3787027/pexels-photo-3787027.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Dirty kitchen sink before professional clean" loading="lazy">
+              <span class="ba-badge ba-before">Before</span>
+            </div>
+            <div class="ba-half">
+              <img src="https://images.pexels.com/photos/13009887/pexels-photo-13009887.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Spotless bright kitchen after professional clean" loading="lazy">
+              <span class="ba-badge ba-after">After</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fencing -->
+        <div class="project-card animate-on-scroll">
+          <div class="project-service-tag">Fencing</div>
+          <div class="before-after">
+            <div class="ba-half">
+              <img src="https://images.pexels.com/photos/8807024/pexels-photo-8807024.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Old broken fence before replacement" loading="lazy">
+              <span class="ba-badge ba-before">Before</span>
+            </div>
+            <div class="ba-half">
+              <img src="https://images.pexels.com/photos/18832449/pexels-photo-18832449.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="New wooden garden fence after installation" loading="lazy">
+              <span class="ba-badge ba-after">After</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Landscaping -->
+        <div class="project-card animate-on-scroll">
+          <div class="project-service-tag">Landscaping &amp; Garden Makeover</div>
+          <div class="before-after">
+            <div class="ba-half">
+              <img src="https://images.pexels.com/photos/36682037/pexels-photo-36682037.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Wild overgrown garden before makeover" loading="lazy">
+              <span class="ba-badge ba-before">Before</span>
+            </div>
+            <div class="ba-half">
+              <img src="https://images.pexels.com/photos/11866592/pexels-photo-11866592.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Beautiful stone patio garden after makeover" loading="lazy">
+              <span class="ba-badge ba-after">After</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Loft Clearing -->
+        <div class="project-card project-card-full animate-on-scroll">
+          <div class="project-service-tag">Loft Cleaning &amp; Clearing</div>
+          <div class="before-after">
+            <div class="ba-half">
+              <img src="https://images.pexels.com/photos/11495626/pexels-photo-11495626.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Cluttered loft before clearing" loading="lazy">
+              <span class="ba-badge ba-before">Before</span>
+            </div>
+            <div class="ba-half">
+              <img src="https://images.pexels.com/photos/8082324/pexels-photo-8082324.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Clean empty loft space after clearing" loading="lazy">
+              <span class="ba-badge ba-after">After</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Garden Photo Gallery -->
+      <div class="gallery-header animate-on-scroll">
+        <p class="section-label">Our Portfolio</p>
+        <h2>Garden Transformations</h2>
+        <div class="header-rule"></div>
+      </div>
+
+      <div class="photo-gallery animate-on-scroll">
+        <div class="gallery-item"><img src="Pictures/garden 1.jpeg" alt="Garden project 1" loading="lazy"></div>
+        <div class="gallery-item"><img src="Pictures/garden 2.jpeg" alt="Garden project 2" loading="lazy"></div>
+        <div class="gallery-item"><img src="Pictures/garden 3.jpeg" alt="Garden project 3" loading="lazy"></div>
+        <div class="gallery-item"><img src="Pictures/garden 4.jpeg" alt="Garden project 4" loading="lazy"></div>
+        <div class="gallery-item"><img src="Pictures/garden 5.jpeg" alt="Garden project 5" loading="lazy"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CTA BAND ==================== -->
+  <section id="cta-band">
+    <div class="section-container">
+      <div class="cta-content animate-on-scroll">
+        <h2>Like What You See?</h2>
+        <p>Get in touch today for a free quote on your project. We serve Grays, Thurrock, Essex and surrounding areas.</p>
+        <a href="#" class="btn btn-accent btn-quote">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-footer">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 21V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M12 13C12 13 6 10 6 5C6 5 10 5 12 9C14 5 18 5 18 5C18 10 12 13 12 13Z" fill="currentColor"/>
+            <path d="M12 17C12 17 8.5 15 7 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M12 17C12 17 15.5 15 17 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text"><span class="logo-clear">Clear</span><span class="logo-grounds logo-grounds-footer">Grounds</span></span>
+        </a>
+        <p class="footer-tagline">Professional property services across Grays, Thurrock &amp; Essex.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="projects.html">Recent Projects</a></li>
+          <li><a href="#" class="btn-quote">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li>End of Tenancy Cleaning</li>
+          <li>Fencing</li>
+          <li>Landscaping &amp; Garden Makeover</li>
+          <li>Loft Cleaning &amp; Clearing</li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Get In Touch</h4>
+        <ul>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            <a href="tel:07700000000">07700 000000</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            <a href="mailto:hello@cleargrounds.co.uk">hello@cleargrounds.co.uk</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            <span>Chafford Hundred, Essex</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 ClearGrounds. All rights reserved. &nbsp;|&nbsp; Chafford Hundred, Essex</p>
+    </div>
+  </footer>
+
+  <!-- ==================== QUOTE MODAL ==================== -->
+  <div id="quote-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-icon" aria-hidden="true">
+        <svg viewBox="0 0 52 52" fill="none">
+          <circle cx="26" cy="26" r="23" stroke="currentColor" stroke-width="2"/>
+          <path d="M17 26l7 7 11-14" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h2 id="modal-title">Get Your Free Quote</h2>
+      <p>Choose how you'd like to reach us, we're ready to help.</p>
+      <div class="modal-actions">
+        <a href="tel:07700000000" class="modal-btn modal-btn-call">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span><strong>Call Us</strong><small>07700 000000</small></span>
+        </a>
+        <a href="mailto:hello@cleargrounds.co.uk" class="modal-btn modal-btn-email">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span><strong>Email Us</strong><small>hello@cleargrounds.co.uk</small></span>
+        </a>
+      </div>
+      <p class="modal-note">We'll get back to you within 24 hours.</p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
