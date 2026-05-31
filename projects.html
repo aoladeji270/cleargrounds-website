@@ -105,21 +105,32 @@
         <div class="header-rule"></div>
       </div>
 
-      <!-- Loft Before / After -->
-      <div class="projects-grid">
-        <div class="project-card project-card-full animate-on-scroll">
-          <div class="project-service-tag">Loft Cleaning &amp; Clearing</div>
-          <div class="before-after">
-            <div class="ba-half">
-              <img src="Pictures/loft.jpeg" alt="Loft before clearing" loading="lazy">
-              <span class="ba-badge ba-before">Before</span>
-            </div>
-            <div class="ba-half">
-              <img src="Pictures/loft1.jpeg" alt="Loft after clearing" loading="lazy">
-              <span class="ba-badge ba-after">After</span>
-            </div>
+      <!-- Loft Slider -->
+      <div class="gallery-slider animate-on-scroll" id="loft-slider">
+        <div class="gallery-slides">
+          <div class="gallery-slide active">
+            <img src="Pictures/loft.jpeg" alt="Loft before clearing">
+            <span class="ba-badge ba-before slide-badge">Before</span>
+          </div>
+          <div class="gallery-slide">
+            <img src="Pictures/loft1.jpeg" alt="Loft after clearing">
+            <span class="ba-badge ba-after slide-badge">After</span>
           </div>
         </div>
+
+        <button class="gallery-arrow gallery-prev" aria-label="Previous image">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="gallery-arrow gallery-next" aria-label="Next image">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="gallery-dots">
+          <span class="gallery-dot active"></span>
+          <span class="gallery-dot"></span>
+        </div>
+
+        <div class="gallery-counter" id="loft-counter">1 / 2</div>
       </div>
 
     </div>
