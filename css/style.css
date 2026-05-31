@@ -505,6 +505,124 @@ p:last-child { margin-bottom: 0; }
 
 
 /* ============================================================
+   RECENT PROJECTS
+============================================================ */
+#projects { background: var(--color-white); }
+
+/* Featured video */
+.project-video-wrap {
+  position: relative;
+  height: 400px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+.project-video-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.project-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13,31,23,0.75) 0%, transparent 50%);
+}
+.project-video-label {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.pv-tag {
+  background: var(--color-accent);
+  color: var(--color-dark);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Before / After grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-service-tag {
+  padding: 0.85rem 1.25rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.before-after {
+  display: flex;
+  height: 230px;
+}
+
+.ba-half {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+.ba-half + .ba-half {
+  border-left: 3px solid var(--color-white);
+}
+.ba-half img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.55s ease;
+  display: block;
+}
+.project-card:hover .ba-half img { transform: scale(1.06); }
+
+.ba-badge {
+  position: absolute;
+  top: 0.65rem;
+  left: 0.65rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.ba-before {
+  background: rgba(0,0,0,0.6);
+  color: var(--color-white);
+}
+.ba-after {
+  background: var(--color-accent);
+  color: var(--color-dark);
+}
+
+/* ============================================================
    WHY CHOOSE US
 ============================================================ */
 #why-us {
@@ -913,6 +1031,11 @@ footer {
   /* Services */
   .services-grid { grid-template-columns: 1fr; gap: 1.25rem; }
 
+  /* Recent Projects */
+  .project-video-wrap { height: 260px; margin-bottom: 1.5rem; }
+  .projects-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .before-after { height: 190px; }
+
   /* Why Us */
   .why-grid {
     grid-template-columns: 1fr;
@@ -961,6 +1084,11 @@ footer {
   .service-card { padding: 2rem 1.5rem; }
   .card-img-wrap { margin: -2rem -1.5rem 1.6rem; }
   .card-img-wrap { height: 190px; }
+
+  /* Recent Projects */
+  .project-video-wrap { height: 210px; }
+  .before-after { height: 160px; }
+  .project-video-label { font-size: 0.85rem; bottom: 1rem; left: 1rem; }
 
   /* Why Us */
   .why-icon { width: 60px; height: 60px; }
