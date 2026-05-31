@@ -128,6 +128,30 @@
   }, 1000);
 
 
+  /* ── Landscaping image slider ───────────────────────────── */
+  var slider = document.getElementById('landscaping-slider');
+  if (slider) {
+    var slides = slider.querySelectorAll('.slide');
+    var dots   = slider.querySelectorAll('.slider-dot');
+    var current = 0;
+
+    function goToSlide(index) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = index;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { goToSlide(i); });
+    });
+
+    setInterval(function () {
+      goToSlide((current + 1) % slides.length);
+    }, 3500);
+  }
+
   /* ── Read More / Read Less toggle ───────────────────────── */
   document.querySelectorAll('.read-more-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
