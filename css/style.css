@@ -561,6 +561,20 @@ p:last-child { margin-bottom: 0; }
   font-weight: 600;
 }
 
+/* Projects coming soon */
+.projects-coming-soon {
+  text-align: center;
+  padding: 2.5rem;
+  background: var(--color-light);
+  border-radius: var(--radius-lg);
+  margin-bottom: 2rem;
+}
+.projects-coming-soon p {
+  color: var(--color-gray);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
 /* Photo gallery grid */
 .gallery-header { text-align: center; margin: 3.5rem 0 2rem; }
 
