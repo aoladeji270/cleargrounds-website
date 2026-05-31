@@ -208,6 +208,15 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* Logo */
+.logo-img {
+  height: 46px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+.logo-footer .logo-img { height: 38px; }
+@media (max-width: 768px) { .logo-img { height: 38px; } }
+
 .logo {
   display: flex;
   align-items: center;
