@@ -656,6 +656,17 @@ p:last-child { margin-bottom: 0; }
   object-position: center;
   display: block;
 }
+/* Crop embedded text from images — stronger scale on mobile */
+.crop-top {
+  object-position: bottom !important;
+  transform: scale(1.18);
+  transform-origin: bottom center;
+}
+.crop-bottom {
+  object-position: top !important;
+  transform: scale(1.18);
+  transform-origin: top center;
+}
 
 /* Arrow buttons */
 .gallery-arrow {
@@ -1297,6 +1308,7 @@ footer {
   /* Recent Projects */
   .project-video-wrap { height: 260px; margin-bottom: 1.5rem; }
   .video-slides-wrap { height: 300px; }
+  .crop-top, .crop-bottom { transform: scale(1.32); }
   .projects-grid { grid-template-columns: 1fr; gap: 1.25rem; }
   .before-after { height: 190px; }
 
@@ -1365,6 +1377,7 @@ footer {
   .gallery-slides { height: 280px; }
   .gallery-prev { left: 0.75rem; }
   .gallery-next { right: 0.75rem; }
+  .crop-top, .crop-bottom { transform: scale(1.45); }
   .project-card-full .before-after { height: 280px; }
   .page-hero { padding: calc(var(--nav-height) + 2.5rem) 1.25rem 2.5rem; }
 
