@@ -521,6 +521,48 @@ p:last-child { margin-bottom: 0; }
 
 .card-more.hidden { display: none; }
 
+/* Landscaping expanded content */
+.card-section-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--color-accent);
+}
+.card-sub-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-dark);
+  margin-top: 0.8rem;
+  margin-bottom: 0.25rem;
+}
+.card-service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.4rem 0;
+}
+.card-service-list li {
+  font-size: 0.875rem;
+  color: #555;
+  padding: 0.18rem 0 0.18rem 1.2rem;
+  position: relative;
+  line-height: 1.5;
+}
+.card-service-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
 .read-more-btn {
   background: none;
   border: none;
