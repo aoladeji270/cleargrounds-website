@@ -151,9 +151,10 @@
     setInterval(function () { go(cur + 1); }, interval || 3500);
   }
 
-  initCardSlider('landscaping-slider', 3500);
-  initCardSlider('fencing-card-slider', 4000);
-  initCardSlider('loft-card-slider',    4500);
+  initCardSlider('cleaning-card-slider', 3000);
+  initCardSlider('landscaping-slider',   3500);
+  initCardSlider('fencing-card-slider',  4000);
+  initCardSlider('loft-card-slider',     4500);
 
 
   /* ── Read More / Read Less toggle ───────────────────────── */
@@ -168,6 +169,46 @@
       btn.textContent = isOpen ? 'Read More +' : 'Read Less −';
     });
   });
+
+
+  /* ── Cleaning photo gallery slider ─────────────────────── */
+  var cleaningSlider = document.getElementById('cleaning-slider');
+  if (cleaningSlider) {
+    var cSlides  = cleaningSlider.querySelectorAll('.gallery-slide');
+    var cDots    = cleaningSlider.querySelectorAll('.gallery-dot');
+    var cCounter = document.getElementById('cleaning-counter');
+    var cCurrent = 0;
+    var cTotal   = cSlides.length;
+
+    function goToCleaning(index) {
+      cSlides[cCurrent].classList.remove('active');
+      cDots[cCurrent].classList.remove('active');
+      cCurrent = (index + cTotal) % cTotal;
+      cSlides[cCurrent].classList.add('active');
+      cDots[cCurrent].classList.add('active');
+      if (cCounter) cCounter.textContent = (cCurrent + 1) + ' / ' + cTotal;
+    }
+
+    cleaningSlider.querySelector('.gallery-prev').addEventListener('click', function () {
+      goToCleaning(cCurrent - 1);
+    });
+    cleaningSlider.querySelector('.gallery-next').addEventListener('click', function () {
+      goToCleaning(cCurrent + 1);
+    });
+
+    cDots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { goToCleaning(i); });
+    });
+
+    var cTouchStartX = 0;
+    cleaningSlider.addEventListener('touchstart', function (e) {
+      cTouchStartX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    cleaningSlider.addEventListener('touchend', function (e) {
+      var diff = cTouchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) goToCleaning(diff > 0 ? cCurrent + 1 : cCurrent - 1);
+    }, { passive: true });
+  }
 
 
   /* ── Garden photo gallery slider ────────────────────────── */
