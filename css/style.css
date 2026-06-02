@@ -213,7 +213,7 @@ p:last-child { margin-bottom: 0; }
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: url('../Pictures/Painting.jpg') center / 300% auto no-repeat;
+  background: url('../Pictures/newlogo.jpeg') center / 260% auto no-repeat;
   flex-shrink: 0;
 }
 .logo-footer .logo-img { width: 38px; height: 38px; }
