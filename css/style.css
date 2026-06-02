@@ -210,14 +210,14 @@ p:last-child { margin-bottom: 0; }
 /* Logo */
 .logo-img {
   display: block;
-  width: 46px;
-  height: 46px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
-  background: url('../Pictures/newlogo.jpeg') center / 260% auto no-repeat;
+  background: url('../Pictures/newlogo.jpeg') center / 120% auto no-repeat;
   flex-shrink: 0;
 }
-.logo-footer .logo-img { width: 38px; height: 38px; }
-@media (max-width: 768px) { .logo-img { width: 38px; height: 38px; } }
+.logo-footer .logo-img { width: 52px; height: 52px; }
+@media (max-width: 768px) { .logo-img { width: 52px; height: 52px; } }
 
 .logo {
   display: flex;
