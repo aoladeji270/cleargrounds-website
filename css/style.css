@@ -656,6 +656,10 @@ p:last-child { margin-bottom: 0; }
   object-position: center;
   display: block;
 }
+/* Anchor cleaning images to top so heads are never cropped */
+#cleaning-card-slider .slide { object-position: top; }
+#cleaning-slider .gallery-slide img { object-position: top; }
+
 /* Crop embedded text from images — stronger scale on mobile */
 .crop-top {
   object-position: bottom !important;
