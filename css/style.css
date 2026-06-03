@@ -1218,6 +1218,40 @@ footer {
   box-shadow: var(--shadow-md);
 }
 
+.modal-btn-whatsapp {
+  background: #25D366;
+  color: var(--color-white);
+  border-color: #25D366;
+}
+.modal-btn-whatsapp:hover {
+  background: #1ebe5d;
+  border-color: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  z-index: 999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-float svg { width: 30px; height: 30px; color: #fff; }
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+}
+
 .modal-note {
   font-size: 0.8rem;
   color: var(--color-gray);
