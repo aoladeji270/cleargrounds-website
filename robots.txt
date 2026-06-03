@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.cleargrounds.co.uk/sitemap.xml
+Sitemap: https://www.cleargroundsservices.co.uk/sitemap.xml
