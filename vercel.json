@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "cleargrounds-website.vercel.app" }],
+      "destination": "https://www.cleargroundsservices.co.uk/$1",
+      "permanent": true
+    }
+  ]
+}
